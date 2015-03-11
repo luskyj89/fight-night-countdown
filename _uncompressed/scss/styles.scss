@@ -179,10 +179,10 @@ h1, h2 {
 
     .logo {
         position: relative;
-        left: 425px;
-        top: 65px;
-        width: 400px;
-        height: 400px;
+        left: 695px;
+        top: 20px;
+        width: 450px;
+        height: 450px;
         background: url(../img/logo-fightnight.png) no-repeat;
         background-size: 100%;
         z-index: 100;
@@ -191,7 +191,7 @@ h1, h2 {
     h1 {
         position: absolute;
         top: 590px;
-        left: 407px;
+        left: 697px;
         color: rgba(255, 255, 255, 0.6);
         font-size: 22px;
 
@@ -218,14 +218,13 @@ h1, h2 {
 .countdown {
     position: absolute;
     top: 402px;
-    left: 260px;
+    left: 545px;
     width: 735px;
     height: 150px;
     padding: 60px 0 0 50px;
-    background: $black;
     border-bottom: 8px solid $blue;
     font-family: $font-outage;
     color: $white;
-    font-size: 40px;
+    font-size: 58px;
     box-sizing: border-box;
 }
