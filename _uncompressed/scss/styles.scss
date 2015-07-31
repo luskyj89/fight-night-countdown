@@ -157,7 +157,7 @@ textarea {
 /// Globals
 body {
   -webkit-font-smoothing: antialiased;
-  background: black url(../img/bg-main.png) repeat;
+  background: black;
   background-attachment: fixed;
   overflow-x: hidden;
   width: 1280px;
@@ -167,6 +167,7 @@ body {
 h1, h2 {
     font-family: $font-outage;
     color: $green;
+    font-weight: normal;
 }
 
 
@@ -177,21 +178,42 @@ h1, h2 {
     z-index: 1000;
     overflow: hidden;
 
+    .logo, .logo-border {
+        position: absolute;
+        left: 405px;
+        top: 25px;
+        width: 430px;
+        height: 429px;
+        z-index: 100;
+    }
+
     .logo {
-        position: relative;
-        left: 425px;
-        top: 65px;
-        width: 400px;
-        height: 400px;
         background: url(../img/logo-fightnight.png) no-repeat;
         background-size: 100%;
-        z-index: 100;
+    }
+
+    .logo-border {
+        background: url(../img/logo-fightnight-border.png) no-repeat;
+        background-size: 100%;
+        -webkit-animation: borderspin 5s linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    @-webkit-keyframes borderspin {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        100% {
+            transform: rotateZ(360deg);
+        }
     }
 
     h1 {
         position: absolute;
         top: 590px;
-        left: 407px;
+        left: 110px;
         color: rgba(255, 255, 255, 0.6);
         font-size: 22px;
 
@@ -210,7 +232,7 @@ h1, h2 {
     height: 720px;
     background-size: cover;
     background-attachment: fixed;
-    opacity: .4;
+    opacity: .8;
     z-index: 999;
 }
 
@@ -221,11 +243,31 @@ h1, h2 {
     left: 260px;
     width: 735px;
     height: 150px;
-    padding: 60px 0 0 50px;
+    padding: 50px 0 0 0px;
     background: $black;
     border-bottom: 8px solid $blue;
     font-family: $font-outage;
-    color: $white;
-    font-size: 40px;
+    color: $blue;
+    font-size: 58px;
+    text-align: center;
     box-sizing: border-box;
+    -webkit-animation: bordercolor 20s ease-out;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bordercolor {
+    0% {
+        border-color: $blue;
+        color: $blue;
+    }
+    50% {
+        border-color: $green;
+        color: $green;
+    }
+    100% {
+        border-color: $blue;
+        color: $blue;
+    }
 }
